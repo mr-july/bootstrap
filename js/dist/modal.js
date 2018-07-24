@@ -297,10 +297,15 @@ var Modal = (function ($) {
         this._element.style.display = 'none';
         this._element.setAttribute('aria-hidden', 'true');
         this._showBackdrop(function () {
-          $(document.body).removeClass(ClassName.OPEN);
+          $(_this5._element).trigger(Event.HIDDEN);
+          // Modified 2018-07-24 by MarkusF:
+          // remove modal-open class only if last backdrop is removed
+          // to allow usage of multiple open modals
+          if ($('.' + ClassName.BACKDROP).length === 0) {
+            $(document.body).removeClass(ClassName.OPEN);
+          }
           _this5._resetAdjustments();
           _this5._resetScrollbar();
-          $(_this5._element).trigger(Event.HIDDEN);
         });
       }
     }, {

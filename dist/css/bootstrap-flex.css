@@ -4409,6 +4409,8 @@ input[type="button"].btn-block {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -4433,6 +4435,8 @@ input[type="button"].btn-block {
     display: -webkit-flex;
     display: -ms-flexbox;
     display: flex;
+    -webkit-box-orient: horizontal;
+    -webkit-box-direction: normal;
     -webkit-flex-flow: row wrap;
         -ms-flex-flow: row wrap;
             flex-flow: row wrap;
@@ -5035,6 +5039,7 @@ base::-moz-progress-bar,
 .media-middle {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
           align-self: center;
 }
 
@@ -5368,7 +5373,7 @@ button.close {
 .modal.fade .modal-dialog {
   -webkit-transition: -webkit-transform .3s ease-out;
   transition: -webkit-transform .3s ease-out;
-  -o-transition: transform .3s ease-out, -o-transform .3s ease-out;
+  -o-transition: -o-transform .3s ease-out;
   transition: transform .3s ease-out;
   transition: transform .3s ease-out, -webkit-transform .3s ease-out, -o-transform .3s ease-out;
   -webkit-transform: translate(0, -25%);
@@ -5753,7 +5758,7 @@ button.close {
   .carousel-inner > .carousel-item {
     -webkit-transition: -webkit-transform .6s ease-in-out;
     transition: -webkit-transform .6s ease-in-out;
-    -o-transition: transform .6s ease-in-out, -o-transform .6s ease-in-out;
+    -o-transition: -o-transform .6s ease-in-out;
     transition: transform .6s ease-in-out;
     transition: transform .6s ease-in-out, -webkit-transform .6s ease-in-out, -o-transform .6s ease-in-out;
     -webkit-backface-visibility: hidden;
@@ -6060,7 +6065,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   -webkit-box-align: start;
   -webkit-align-items: flex-start;
       -ms-flex-align: start;
-              -ms-grid-row-align: flex-start;
           align-items: flex-start;
 }
 
@@ -6068,7 +6072,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   -webkit-box-align: center;
   -webkit-align-items: center;
       -ms-flex-align: center;
-              -ms-grid-row-align: center;
           align-items: center;
 }
 
@@ -6076,7 +6079,6 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   -webkit-box-align: end;
   -webkit-align-items: flex-end;
       -ms-flex-align: end;
-              -ms-grid-row-align: flex-end;
           align-items: flex-end;
 }
 
@@ -6089,6 +6091,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
 .flex-xs-middle {
   -webkit-align-self: center;
       -ms-flex-item-align: center;
+              -ms-grid-row-align: center;
           align-self: center;
 }
 
@@ -6158,21 +6161,18 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .flex-items-sm-middle {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
   }
   .flex-items-sm-bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -6186,6 +6186,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .flex-sm-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center;
   }
   .flex-sm-bottom {
@@ -6253,21 +6254,18 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .flex-items-md-middle {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
   }
   .flex-items-md-bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -6281,6 +6279,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .flex-md-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center;
   }
   .flex-md-bottom {
@@ -6348,21 +6347,18 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .flex-items-lg-middle {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
   }
   .flex-items-lg-bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -6376,6 +6372,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .flex-lg-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center;
   }
   .flex-lg-bottom {
@@ -6443,21 +6440,18 @@ a.bg-inverse:focus, a.bg-inverse:hover {
     -webkit-box-align: start;
     -webkit-align-items: flex-start;
         -ms-flex-align: start;
-                -ms-grid-row-align: flex-start;
             align-items: flex-start;
   }
   .flex-items-xl-middle {
     -webkit-box-align: center;
     -webkit-align-items: center;
         -ms-flex-align: center;
-                -ms-grid-row-align: center;
             align-items: center;
   }
   .flex-items-xl-bottom {
     -webkit-box-align: end;
     -webkit-align-items: flex-end;
         -ms-flex-align: end;
-                -ms-grid-row-align: flex-end;
             align-items: flex-end;
   }
 }
@@ -6471,6 +6465,7 @@ a.bg-inverse:focus, a.bg-inverse:hover {
   .flex-xl-middle {
     -webkit-align-self: center;
         -ms-flex-item-align: center;
+                -ms-grid-row-align: center;
             align-self: center;
   }
   .flex-xl-bottom {

@@ -1,6 +1,6 @@
 /*!
  * Bootstrap v4.0.0-alpha.4 (http://getbootstrap.com)
- * Copyright 2011-2016 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
+ * Copyright 2011-2018 The Bootstrap Authors (https://github.com/twbs/bootstrap/graphs/contributors)
  * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
  */
 
@@ -1960,10 +1960,15 @@ var Modal = (function ($) {
         this._element.style.display = 'none';
         this._element.setAttribute('aria-hidden', 'true');
         this._showBackdrop(function () {
-          $(document.body).removeClass(ClassName.OPEN);
+          $(_this11._element).trigger(Event.HIDDEN);
+          // Modified 2018-07-24 by MarkusF:
+          // remove modal-open class only if last backdrop is removed
+          // to allow usage of multiple open modals
+          if ($('.' + ClassName.BACKDROP).length === 0) {
+            $(document.body).removeClass(ClassName.OPEN);
+          }
           _this11._resetAdjustments();
           _this11._resetScrollbar();
-          $(_this11._element).trigger(Event.HIDDEN);
         });
       }
     }, {
