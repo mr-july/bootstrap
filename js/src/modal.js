@@ -294,10 +294,15 @@ const Modal = (($) => {
       this._element.style.display = 'none'
       this._element.setAttribute('aria-hidden', 'true')
       this._showBackdrop(() => {
-        $(document.body).removeClass(ClassName.OPEN)
+        $(this._element).trigger(Event.HIDDEN)
+        // Modified 2018-07-24 by MarkusF:
+        // remove modal-open class only if last backdrop is removed
+        // to allow usage of multiple open modals
+        if ($(`.${ClassName.BACKDROP}`).length === 0) {
+          $(document.body).removeClass(ClassName.OPEN)
+        }
         this._resetAdjustments()
         this._resetScrollbar()
-        $(this._element).trigger(Event.HIDDEN)
       })
     }
 
